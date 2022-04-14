@@ -1,0 +1,25 @@
+version: '3'
+services:
+  web:
+    build: .docker
+    ports:
+      - "8080:80"
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache
+      - .:/app
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7.26
+    ports:
+      - "6033:3306"
+    environment:
+      MYSQL_DATABASE: readyworks
+      MYSQL_ROOT_PASSWORD: "password"
+    volumes:
+      - ./.docker/dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:
+    driver: local

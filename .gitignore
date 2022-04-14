@@ -1,0 +1,21 @@
+# phpstorm project files
+.idea
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+/vendor
+
+# Mac DS_Store Files
+.DS_Store
+
+tests/_output/*
+tests/_support/_generated
+
+# env-specific files
+.env
+.docker/dbdata
+
+# Weird Windows files
+*Zone.Identifier
