@@ -62,6 +62,7 @@ class SiteController extends Controller
             'operating_systems' => Computer::find()
                 ->select(['operating_system', 'COUNT(*) AS data'])
                 ->groupBy('operating_system')
+                ->orderBy(['data' => SORT_DESC])
                 ->createCommand(),
             'locations' => Computer::find()
                 ->select(['location', 'COUNT(*) AS data'])

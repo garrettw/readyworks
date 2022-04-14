@@ -60,10 +60,10 @@ class Computer extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
+            'id' => Yii::t('app', 'Asset ID'),
+            'name' => Yii::t('app', 'Computer Name'),
             'migration_status' => Yii::t('app', 'Migration Status'),
-            'user_name' => Yii::t('app', 'User Name'),
+            'user_name' => Yii::t('app', 'Description'),
             'location' => Yii::t('app', 'Location'),
             'computer_type' => Yii::t('app', 'Computer Type'),
             'computer_model' => Yii::t('app', 'Computer Model'),
@@ -72,15 +72,15 @@ class Computer extends \yii\db\ActiveRecord
             'memory_gb' => Yii::t('app', 'Memory (GB)'),
             'disk_size_gb' => Yii::t('app', 'Disk Size (GB)'),
             'free_space_gb' => Yii::t('app', 'Free Space (GB)'),
-            'serial' => Yii::t('app', 'Serial'),
+            'serial' => Yii::t('app', 'Serial Number'),
             'business_unit' => Yii::t('app', 'Business Unit'),
             'department' => Yii::t('app', 'Department'),
-            'replacement_ordered' => Yii::t('app', 'Replacement Ordered'),
+            'replacement_ordered' => Yii::t('app', 'HW Replacement Ordered'),
             'static_ip' => Yii::t('app', 'Static IP'),
             'state' => Yii::t('app', 'State'),
             'central_build_site' => Yii::t('app', 'Central Build Site'),
             'last_logon_user' => Yii::t('app', 'Last Logon User'),
-            'vetted' => Yii::t('app', 'Vetted'),
+            'vetted' => Yii::t('app', 'Asset Vetted'),
         ];
     }
 }
