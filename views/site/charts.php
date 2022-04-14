@@ -3,6 +3,7 @@
 use practically\chartjs\Chart;
 use yii\bootstrap4\Html;
 use yii\db\Command;
+use yii\web\JsExpression;
 
 /** @var \yii\web\View $this */
 /** @var Command $top10models */
@@ -80,7 +81,7 @@ $this->title = 'Computers: Charts View';
         ]) ?></div>
         <div class="col-sm-4"><?= \app\widgets\Chart::widget([
             'type' => Chart::TYPE_BAR,
-            'plugins' => ['ChartDataLabels'],
+            'plugins' => [new JsExpression('ChartDataLabels')],
             'clientOptions' => [
                 'title' => [
                     'display' => true,
